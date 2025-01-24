@@ -17,6 +17,7 @@ import {
   Laptop,
   Bike,
   Figma,
+  CircleArrowOutUpRight,
 } from 'lucide-react';
 
 type Project = {
@@ -90,7 +91,7 @@ export default function Home() {
     {
       icon: <Bike className='h-5 w-5 text-accent' />,
       title: 'Bisiklet Sürme',
-      desc: 'Hafta sonları bisiklet sürmeyi seviyorum',
+      desc: 'Haftasonu bisiklet sürmeyi seviyorum',
     },
   ];
 
@@ -99,8 +100,9 @@ export default function Home() {
       title: 'FullStack Developer Intern',
       company: 'Shift Accelerator',
       period: 'Feb 2022 - June 2023',
+      link: 'https://www.shift.engineering',
       description:
-        'Modern web uygulamaları geliştirme, performans optimizasyonu ve kullanıcı deneyimi iyileştirmeleri.',
+        'Experienced in developing scalable microservices with Node.js and Express.js, enhancing micro-frontend applications using Vue.js and Nuxt.js. Proficient in Docker containerization, CI/CD pipelines (GitLab), and test-driven development to ensure high-quality, efficient, and maintainable solutions.',
       achievements: [
         'Developed microservices using Node.js with Express.js, enabling modular and maintainable code.',
         'Enhanced search bar and listing pages in micro-frontend modules with Vue.js, Nuxt.js, and Tailwind CSS.',
@@ -114,8 +116,9 @@ export default function Home() {
       title: 'Frontend Developer',
       company: 'Özgür Yazılım',
       period: 'Aug 2023 - Dec 2024',
+      link: 'https://www.ozguryazilim.com.tr',
       description:
-        'E-ticaret platformu için modern ve kullanıcı dostu arayüzler geliştirdim.',
+        'Experienced in developing mobile applications with Expo and React Native, and web applications using React and Mantine. Proficient in building server-side applications with Java and Spring Boot, and skilled in collaborating within Agile teams for efficient development and delivery.',
       achievements: [
         'Developed mobile applications using Expo and React Native, ensuring an optimized and responsive user interface.',
         'Built interactive and user-friendly web applications with React and Mantine.',
@@ -408,7 +411,17 @@ export default function Home() {
                       <h3 className='text-xl font-semibold gradient-text'>
                         {job.title}
                       </h3>
-                      <p className='text-muted-foreground'>{job.company}</p>
+                      <p className='text-muted-foreground'>
+                        {job.company}
+                        {'  '}
+                        <a
+                          href={job.link}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <CircleArrowOutUpRight className='h-4 w-4 inline-block' />
+                        </a>
+                      </p>
                     </div>
                     <p className='text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full mt-2 md:mt-0'>
                       {job.period}
