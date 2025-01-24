@@ -258,18 +258,6 @@ export default function Home() {
         className='min-h-screen flex items-center justify-center text-center px-4 relative overflow-hidden bg-gradient-to-b from-background via-accent/5 to-background'
       >
         <div className='relative z-10'>
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className='absolute -top-20 -left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl'
-          />
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className='absolute -bottom-20 -right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl'
-          />
           <motion.h1
             className='text-3xl font-bold mb-6 gradient-text'
             variants={fadeInUp}
